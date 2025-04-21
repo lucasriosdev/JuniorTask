@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Product Scraper</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="container">
+          <h1>Amazon Product Scraper</h1>
+          <p>Enter a keyword to scrape products from Amazon's first results page</p>
+        </div>
+      </header>
+      
+      <main class="container">
+        <section class="search-section">
+          <div class="search-container">
+            <input 
+              type="text" 
+              id="keyword" 
+              placeholder="Enter a product keyword (e.g., headphones, laptop, book)"
+              autocomplete="off"
+            >
+            <button id="search-btn">Search</button>
+          </div>
+          <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>Scraping products, please wait...</p>
+          </div>
+        </section>
+
+        <section class="results-section">
+          <div id="error-message"></div>
+          <div id="results-container"></div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <p>This is a demonstration tool for educational purposes only. Use responsibly and respect Amazon's terms of service.</p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
